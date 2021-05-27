@@ -2,6 +2,15 @@ package main
 
 import "fmt"
 
+// Kind
+type Kind int
+
+const (
+	VILLAGER = iota
+	METROPOLITAN
+)
+
+// Person defines what a Person is
 type Person interface {
 	GetName() string
 }
@@ -21,14 +30,6 @@ type Metropolitan struct{}
 func (v Metropolitan) GetName() string {
 	return "villager"
 }
-
-// Kind
-type Kind int
-
-const (
-	VILLAGER = iota
-	METROPOLITAN
-)
 
 // Factory is our factory struct.
 type Factory struct{}
@@ -52,5 +53,5 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Printf("%T", folk) // main.Villager
+	fmt.Printf("%T, I am a %s", folk, folk.GetName()) // main.Villager
 }
