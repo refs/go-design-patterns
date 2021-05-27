@@ -1,0 +1,56 @@
+package main
+
+import "fmt"
+
+type Person interface {
+	GetName() string
+}
+
+// Villager implements the Person interface.
+type Villager struct{}
+
+// GetName implementation of Person.
+func (v Villager) GetName() string {
+	return "villager"
+}
+
+// Metropolitan implements the Person interface.
+type Metropolitan struct{}
+
+// GetName implementation of Person.
+func (v Metropolitan) GetName() string {
+	return "villager"
+}
+
+// Kind
+type Kind int
+
+const (
+	VILLAGER = iota
+	METROPOLITAN
+)
+
+// Factory is our factory struct.
+type Factory struct{}
+
+// GetPerson is the factory method. It returns a Person kind according to its arguments.
+func (f Factory) GetPerson(k Kind) (Person, error) {
+	switch k {
+	case VILLAGER:
+		return Villager{}, nil
+	case METROPOLITAN:
+		return Metropolitan{}, nil
+	default:
+		return nil, fmt.Errorf("invalid kind: %v", k)
+	}
+}
+
+func main() {
+	f := Factory{}
+	folk, err := f.GetPerson(VILLAGER)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Printf("%T", folk) // main.Villager
+}
