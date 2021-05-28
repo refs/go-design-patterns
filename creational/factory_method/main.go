@@ -31,11 +31,8 @@ func (v Metropolitan) GetName() string {
 	return "villager"
 }
 
-// Factory is our factory struct.
-type Factory struct{}
-
 // GetPerson is the factory method. It returns a Person kind according to its arguments.
-func (f Factory) GetPerson(k Kind) (Person, error) {
+func GetPerson(k Kind) (Person, error) {
 	switch k {
 	case VILLAGER:
 		return Villager{}, nil
@@ -47,8 +44,7 @@ func (f Factory) GetPerson(k Kind) (Person, error) {
 }
 
 func main() {
-	f := Factory{}
-	folk, err := f.GetPerson(VILLAGER)
+	folk, err := GetPerson(VILLAGER)
 	if err != nil {
 		panic(err)
 	}

@@ -28,7 +28,7 @@ Deal with object creation mechanism; encapsulates knowledge about concrete types
 
 | **Pattern** | **Description** |
 |:---:|:---:|
-| [Factory](/creational/factory/factory.md) | Use a factory method to create objects |
+| [Factory Method](/creational/factory_method/factory.md) | Define an interface for creating an object, but let subclasses decide which class to instantiate |
 | [Abstract Factory](/creational/abstract_factory/abstract_factory.md) | Encapsulate a group of individual factories |
 
 ## Sources and Inspiration
