@@ -1,4 +1,13 @@
-# Factory
+- [Factory Method](#factory-method)
+  * [Code Sample Breakdown](#code-sample-breakdown)
+    + [Abstract Interface](#abstract-interface)
+    + [Concrete Interface](#concrete-interface)
+    + [Factory Method](#factory-method-1)
+    + [Supporting logic](#supporting-logic)
+    + [Putting it all together: The Client](#putting-it-all-together-the-client)
+  * [Recipe](#recipe)
+
+# Factory Method
 
 > Define an interface for creating an object, but let subclasses decide which class to instantiate
 
