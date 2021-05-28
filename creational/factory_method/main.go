@@ -10,29 +10,29 @@ const (
 	METROPOLITAN
 )
 
-// Person defines what a Person is
-type Person interface {
-	GetName() string
+// Settler defines what a Settler is
+type Settler interface {
+	GetKind() string
 }
 
-// Villager implements the Person interface.
+// Villager implements the Settler interface.
 type Villager struct{}
 
-// GetName implementation of Person.
-func (v Villager) GetName() string {
+// GetName implementation of Settler.
+func (v Villager) GetKind() string {
 	return "villager"
 }
 
-// Metropolitan implements the Person interface.
+// Metropolitan implements the Settler interface.
 type Metropolitan struct{}
 
-// GetName implementation of Person.
-func (v Metropolitan) GetName() string {
+// GetName implementation of Settler.
+func (v Metropolitan) GetKind() string {
 	return "villager"
 }
 
-// GetPerson is the factory method. It returns a Person kind according to its arguments.
-func GetPerson(k Kind) (Person, error) {
+// GetPerson is the factory method. It returns a Settler kind according to its arguments.
+func GetPerson(k Kind) (Settler, error) {
 	switch k {
 	case VILLAGER:
 		return Villager{}, nil
@@ -49,5 +49,5 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Printf("%T, I am a %s", folk, folk.GetName()) // main.Villager
+	fmt.Printf("%T, I am a %s", folk, folk.GetKind()) // main.Villager, I am a villager
 }
