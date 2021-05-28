@@ -97,9 +97,9 @@ func (f linuxFactory) createButton() button {
 }
 
 func main() {
-	client := newButtonDrawer()
+	buttons := newButtonDrawer()
 	// this pattern scales horizontally: having more GUI buttons is just a matter of adding more factories and concrete
 	// types. However the client logic remain untouched. Adding another set of factory and struct won't break this code.
-	button := client.factory.createButton()
+	button := buttons.factory.createButton()
 	button.draw()
 }
