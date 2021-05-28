@@ -14,7 +14,7 @@ Deal with object creation mechanism; encapsulates knowledge about concrete types
 │   Creator    │ 
 │              │ 
 └──────────────┘ 
-        ▲        
+        △        
         │        
         │        
 ┌───────────────┐
