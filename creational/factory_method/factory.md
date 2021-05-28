@@ -1,3 +1,5 @@
+# Table of Contents
+
 - [Factory Method](#factory-method)
   * [Code Sample Breakdown](#code-sample-breakdown)
     + [Abstract Interface](#abstract-interface)
