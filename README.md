@@ -1,4 +1,4 @@
-## Software Design Patterns - with a touch of Go
+## Software Design Patterns - With a touch of Go
 
 ### Creational
 
