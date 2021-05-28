@@ -26,6 +26,12 @@ Deal with object creation mechanism; encapsulates knowledge about concrete types
 
 </details>
 
+<style>
+table {
+    width:100%;
+}
+</style>
+
 | **Pattern** | **Description** |
 | --- | --- |
 | [Factory](https://github.com/refs/go-design-patterns/blob/master/creational/factory/factory.md) | Use a factory method to create objects |
