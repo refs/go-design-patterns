@@ -24,8 +24,11 @@ Deal with object creation mechanism; encapsulates knowledge about concrete types
 └───────────────┘
 ```
 
-</details>
+|**Pattern**|
+|[Factory](https://github.com/refs/go-design-patterns/blob/master/creational/factory/factory.md)|
+|[Abstract Factory](https://github.com/refs/go-design-patterns/blob/master/creational/abstract_factory/abstract_factory.md)|
 
+</details>
 
 ## Sources and Inspiration
 - [Software Design Patterns - Classification](https://en.wikipedia.org/wiki/Software_design_pattern#Classification_and_list)
