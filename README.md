@@ -5,7 +5,7 @@
 Deal with object creation mechanism; encapsulates knowledge about concrete types and how these are created.
 
 <details>
-<summary>How do I dropdown?</summary>
+<summary>diagram</summary>
 <br>
 
 ```
